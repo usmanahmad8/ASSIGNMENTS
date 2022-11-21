@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <h1>Percentage Calculator <i class="fa fa-calculator" style="font-size:34px"></i></h1>
+    <form class="wrapper">
+      <h2 id="result"></h2>
+    </form>
+
+    <style>
+      body {
+        margin: 0%;
+        padding: 0%;
+        background-color: rebeccapurple;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .wrapper {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        color: white;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+        background-color: black;
+        border: 2px solid rgb(40, 5, 75);
+        border-radius: 5px;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px;
+        height: auto;
+        width: auto;
+      }
+      body h1 {
+        color: black;
+        text-align: center;
+        text-shadow: rgb(38, 57, 77) 0px 20px 30px;
+      }
+    </style>
+
+    <script>
+      let totalMarks = prompt("ENTER YOUR TOTAL MARKS");
+      let marksObtained = prompt("ENTER YOUR OBTAINED MARKS");
+      let result = (marksObtained * 100) / totalMarks;
+      document.querySelector(
+        "#result"
+      ).innerHTML = ` Your Percentage Is:  ${result}%`;
+    </script>
+  </body>
+</html>
